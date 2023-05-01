@@ -110,11 +110,11 @@ const SideMenu = () => {
                 },
       }}
       >
-      <DrawerHeader>
+      <div className ={scss.drawerHead}>
         <IconButton onClick={handleDrawerToggle}>
           {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
         </IconButton>
-      </DrawerHeader>
+      </div>
       <Divider />
       <List>
           {menuListTranslations.map((text, index) => (

@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "typings"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "typings", "src", "declaration.d.ts"],
   "exclude": ["node_modules"]
 }
