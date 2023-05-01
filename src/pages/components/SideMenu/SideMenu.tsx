@@ -17,6 +17,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import {useMediaQuery} from "@mui/material";
+import scss from './SideMenu.module.scss';
+import NextLink from "next/link";
 
 // import Drawer from '@mui/material/Drawer';
 import HomeIcon from '@mui/icons-material/Home';
@@ -27,6 +29,8 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { ScreenShareSharp } from '@mui/icons-material';
+
+
 
 const drawerWidth = 240;
 
@@ -119,12 +123,20 @@ const SideMenu = () => {
       <List>
           {menuListTranslations.map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+              <NextLink
+                  className={scss.link}
+                  href={`/dashboard/${menuRouteList[index]}`}
+                  >
               <ListItemButton>
                 <ListItemIcon>
                   {menuListIcons[index]}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text}
+                sx={{
+                  color: 'black'
+                }} />
               </ListItemButton>
+              </NextLink>
             </ListItem>
           ))}
         </List>
@@ -132,12 +144,20 @@ const SideMenu = () => {
         <List>
           {otherListTranslations.map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+              <NextLink
+                  className={scss.link}
+                  href={`/dashboard/${otherRouteList[index]}`}
+                  >
               <ListItemButton>
                 <ListItemIcon>
                   {otherListIcons[index]}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text}
+                sx={{
+                  color: 'black'
+                }} />
               </ListItemButton>
+              </NextLink>
             </ListItem>
           ))}
         </List>
