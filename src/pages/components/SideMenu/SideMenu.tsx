@@ -127,7 +127,11 @@ const SideMenu = () => {
                   className={scss.link}
                   href={`/dashboard/${menuRouteList[index]}`}
                   >
-              <ListItemButton>
+              <ListItemButton
+                onClick={() => setOpen(false)}
+                title={text}
+                aria-label={text}
+              >
                 <ListItemIcon>
                   {menuListIcons[index]}
                 </ListItemIcon>
@@ -148,7 +152,11 @@ const SideMenu = () => {
                   className={scss.link}
                   href={`/dashboard/${otherRouteList[index]}`}
                   >
-              <ListItemButton>
+              <ListItemButton
+                onClick={() => setOpen(false)}
+                title={text}
+                aria-label={text}
+              >
                 <ListItemIcon>
                   {otherListIcons[index]}
                 </ListItemIcon>
