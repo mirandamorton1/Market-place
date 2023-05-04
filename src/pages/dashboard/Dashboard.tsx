@@ -11,9 +11,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
-import { inherits } from 'util';
-
-
+  
 
 
 const Dashboard = () => {
@@ -129,7 +127,8 @@ const Dashboard = () => {
              </Card>
         </Box>
     )
-}
+
+};
 
 
 const products = [
@@ -138,5 +137,6 @@ const products = [
     { label: 'Beans' },
     { label: 'Bananas' },
   ];
+
 
 export default Dashboard;
